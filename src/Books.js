@@ -8,7 +8,6 @@ const Books = () => {
                 <form>
                     <input type="text" placeholder="Title" />
                     <input type="text" placeholder="Pages" />
-                    <input type="text" placeholder="Author" />
                 </form>
             </div>
         </>
