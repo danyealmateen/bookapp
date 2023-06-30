@@ -32,7 +32,6 @@ const Books = () => {
     return (
         <>
             <div className="createNewBookDiv">
-
                 <form onSubmit={handleSubmit}>
                     <button type="submit">Create new book</button>
                     <input
@@ -41,7 +40,6 @@ const Books = () => {
                         value={title}
                         onChange={(e) => {
                             setTitle(e.target.value)
-                            console.log(e.target.value)
                         }}
                     />
                     <input
@@ -50,7 +48,6 @@ const Books = () => {
                         value={pages}
                         onChange={(e) => {
                             setPages(e.target.value)
-                            console.log(e.target.value)
                         }}
                     />
                 </form>
