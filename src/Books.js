@@ -1,13 +1,15 @@
 import "./Books.css";
-import { useState } from "react"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Books = () => {
-
+    const navigate = useNavigate()
     const [title, setTitle] = useState(' ');
     const [pages, setPages] = useState(' ');
 
     const handleSubmit = (e) => {
         e.preventDefault()
+
 
         fetch('https://bookapp-135fc-default-rtdb.europe-west1.firebasedatabase.app/books.json', {
             method: 'POST',
@@ -20,6 +22,7 @@ const Books = () => {
         }).then(data => {
             setTitle(' ')
             setPages(' ')
+            navigate('/')
         }).catch(error => {
             console.error("Error adding book", error)
         })
