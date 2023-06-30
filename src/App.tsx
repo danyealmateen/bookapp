@@ -1,5 +1,6 @@
-import Books from "./Books";
-import Navbar from "./Navbar";
+import React from "react";
+import Books from "./Books/Books";
+import Navbar from "./Navbar/Navbar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {

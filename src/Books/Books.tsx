@@ -1,3 +1,4 @@
+import React from "react";
 import "./Books.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +8,7 @@ const Books = () => {
     const [title, setTitle] = useState(' ');
     const [pages, setPages] = useState(' ');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
 
 
