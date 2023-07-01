@@ -1,14 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import React from "react";
+import "./Navbar.css"
 
 const Navbar = () => {
     const navigate = useNavigate();
     return (
         <>
+            <h1 className="title">My bookshelf</h1>
             <div className="navBar">
-                <h1>My book blog</h1>
-                <button>Home</button>
-                <button onClick={() => navigate('/create')}>Create new book</button>
+                <div className="btns">
+                    <button onClick={() => navigate('/create')}>Create new book</button>
+                </div>
             </div>
         </>
     )

@@ -1,9 +1,13 @@
 import React from "react";
-import "./Books.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Books = () => {
+
+interface BooksProps {
+    handleBookAdded: () => void;
+}
+
+const Books: React.FC<BooksProps> = ({ handleBookAdded }) => {
     const navigate = useNavigate()
     const [title, setTitle] = useState(' ');
     const [pages, setPages] = useState(' ');
@@ -24,6 +28,7 @@ const Books = () => {
             setTitle(' ')
             setPages(' ')
             navigate('/')
+            handleBookAdded();
         }).catch(error => {
             console.error("Error adding book", error)
         })
@@ -33,7 +38,7 @@ const Books = () => {
         <>
             <div className="createNewBookDiv">
                 <form onSubmit={handleSubmit}>
-                    <button type="submit">Create new book</button>
+                    <button type="submit">Add book</button>
                     <input
                         type="text"
                         placeholder="Title"
@@ -55,5 +60,6 @@ const Books = () => {
         </>
     )
 }
+
 
 export default Books;
