@@ -10,6 +10,7 @@ const BookList = () => {
     }
 
     const [books, setBooks] = useState<Book[]>([]);
+    // const [bookAdded, setBookAdded] = useState(false);
 
     useEffect(() => {
         fetch('https://bookapp-135fc-default-rtdb.europe-west1.firebasedatabase.app/books.json')
