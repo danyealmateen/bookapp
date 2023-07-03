@@ -1,0 +1,10 @@
+.bookDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 5px solid pink; */
+    /* width: 300px; */
+    text-align: center;
+    margin: 50px;
+}
